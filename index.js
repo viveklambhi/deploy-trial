@@ -1,7 +1,7 @@
 
 const express = require('express');
 const app = express();
-const port = 8080;
+const PORT = process.env.PORT || 5000
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
@@ -12,6 +12,9 @@ app.get('/home', function(req,res){
 app.get('/', function(req, res){
   res.status(200).json("change url to home");
 })
-app.listen(port, function() {
-  console.log(`running at ${port}`)
+app.get('/favicon.ico', function(req, res) {
+  res.sendStatus(200);
+})
+app.listen(PORT, function() {
+  console.log(`running at ${PORT}`)
 })
