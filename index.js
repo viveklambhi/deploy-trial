@@ -9,7 +9,9 @@ app.use(express.urlencoded({extended:false}));
 app.get('/home', function(req,res){
   res.status(200).json("its working");
 })
-
+app.get('/', function(req, res){
+  res.status(200).json("change url to home");
+})
 app.listen(port, function() {
   console.log(`running at ${port}`)
 })
