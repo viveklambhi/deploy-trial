@@ -6,10 +6,10 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
 app.get('/home', function(req,res){
-  res.status(200).json("its working");
+  res.json({message:"its working"});
 })
 app.get('/', function(req, res){
-  res.status(200).json("change url to home");
+  res.json("change url to home");
 })
 app.get('/favicon.ico', function(req, res) {
   res.sendStatus(200);
