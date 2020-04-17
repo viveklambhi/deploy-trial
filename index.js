@@ -7,6 +7,7 @@ app.use(express.urlencoded({extended:false}));
 
 app.get('/home', function(req,res){
   res.json({message:"its working"});
+  
 })
 app.get('/', function(req, res){
   res.json("change url to home");
